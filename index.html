@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="icon" 
+     type="image/png" 
+     href="data:image/jpeg;base64,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">
+  <title>portfolio-Abdul salam</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+ <!-- <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: DevFolio
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">Abdul salam</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#work">Work</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <div id="hero" class="hero route bg-image" style="background-image: url(img2.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <!--<p class="display-6 color-d">Hello, world!</p>-->
+          <h1 class="hero-title mb-4">I am Abdul salam</h1>
+          <p class="hero-subtitle"><span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
+          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+        </div>
+      </div>
+    </div>
+  </div><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="img3.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p><span class="title-s">Name: </span> <span>Abdul salam</span></p>
+                        <p><span class="title-s">Profile: </span> <span>Python Web Developer</span></p>
+                        <p><span class="title-s">Email: </span> <span>salamshayan.aes@gmail.com</span></p>
+                        <p><span class="title-s">Phone: </span> <span>+91 7356076539</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill-mf">
+                    <p class="title-s">Skill</p>
+                    <span>PYTHON</span> <span class="pull-right">90%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>DJANGO</span> <span class="pull-right">95%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>SQL</span> <span class="pull-right">90%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>CSS</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> 
+                    <span>FIGMA</span> <span class="pull-right">95%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>  
+                    <span>HTML</span> <span class="pull-right">90%</span>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="about-me pt-4 pt-md-0">
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        About me
+                      </h5>
+                    </div>
+                    <p class="lead">
+                      I am an web Designer based in kochi. My primary goal is to provide a rich engaging and innovative user experience to the user.
+                       I have overall 2 month of experience in web design, delivery of service design and product design for web and mobile.
+                       My expertise has been in Wireframe, Prototyping, Sitemap, Product Design, App Design, Web Design, HTML5, CSS3.
+                    </p>
+                    <p class="lead">
+                      Designing & Developing95%
+                      Web design is the planning and creation of websites.
+                       This includes the information, user interface, site structure, navigation, layout,, colors, fonts, and imagery.
+                      
+                    </p>
+                    <p class="lead">
+                      python 90%
+                      Python is a lightweight, cross-platform, and interpreted compiled programming language It is well-known for the development of web pages,
+                      
+                      Java And Scripting 65% HTML & Css & Bootstrap90%
+                      this three are used to create frontend of web page
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services-mf pt-5 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Services
+              </h3>
+              <p class="subtitle-a">
+                The customer himself, the customer will be able to pursue the adipiscing of the company.
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Web Design</h2>
+                <p class="s-description text-center">
+                  websight design services at the most basic level are to promote a buisness or a brand.
+                  a web site is the reflection of your buisness and conveys your brand image in front of your target audianc
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Web Development</h2>
+                <p class="s-description text-center">
+                  LoI help to create all types of web-based software and ensure great experience for web users.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-bar-chart"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Photography</h2>
+                <p class="s-description text-center">
+                  Low lighting images to turned into natural light
+                  * Adjust in natural colors by changing different colors in the picture,
+                  *Turn a beautiful picture by removing darkness and shadows., *Remove Unnecessary object from photo,
+                  
+                  tempora perferendis eum non provident.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-binoculars"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Responsive Design</h2>
+                <p class="s-description text-center">
+                  websight design services at the most basic level are to promote a buisness or a brand.
+                  a web site is the reflection of your buisness and conveys your brand image in front of your target audiance
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-brightness-high"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Graphic Design</h2>
+                <p class="s-description text-center">
+                  If you are looking for the right graphical work, do not waste time and get in touch with our contact.
+                  we are constantly streaming through some of the best knowledge on the invisible vocabulary of the colors, fonts, sizes and shapes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-calendar4-week"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Marketing Services</h2>
+                <p class="s-description text-center">
+                  UI/UX Design
+                  I have overall 2 month experience in UI/UX design,
+                   conceptualization and delivery of service design and product design for web and mobile.
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Counter Section ======= -->
+   
+    <!-- ======= Portfolio Section ======= -->
+    <section id="work" class="portfolio-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Portfolio
+              </h3>
+              <p class="subtitle-a"> 
+              The customer himself, the customer will be able to pursue the adipiscing of the company.
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="star1.png" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <div class="work-img">
+                  <img src="logo.webp" alt="" class="img-fluid">
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Starbucks</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="work-box">
+              <a href="mar3.webp" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <div class="work-img">
+                  <img src="mar1.jpg" alt="" class="img-fluid">
+                </div>
+              </a>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-10">
+                    <h2 class="w-title">Marshall</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                    </div>
+                  </div>  
+                </div>
+              </div>
+    </section><!-- End Portfolio Section -->
+            <!-- <div id="testimonial-mf" class="owl-carousel owl-theme">
+          
+        </div> -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Testimonials Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
+      <div class="overlay-mf"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="contact-mf">
+              <div id="contact" class="box-shadow-full">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        Send Message Us
+                      </h5>
+                    </div>
+                    <div>
+                      <form id="gform" method="post" action="https://script.google.com/macros/s/AKfycbwIyURZ-5jULVRhfmXgRWeDhHxpGFCFNct2KKOd8ZRc6ztr6O1wEYThqNWB1-KRHdYP/exec">
+                        <div class="row">
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" onblur="validateName()">
+                              <span id="nameError" style="color: brown;"></span>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" onblur="validateEmail()">
+                              <span id="emailError"  style="color: brown;"></span>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" onblur="validateSubject()">
+                              <span id="subjectError" style="color: brown;"></span>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message" onblur="validateMessage()" ></textarea>
+                              <span id="messageError" style="color: brown;"></span>
+                            </div>
+                          </div>
+                          <div class="col-md-12 text-center my-3">
+                            <div class="loading">This will go script</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">And I get that mail. Thank you!</div>
+                          </div>
+                          <div class="col-md-12 text-center">
+                            <span id="submitError" style="color: brown;"></span>
+                            <button type="submit" class="button button-a button-big button-rouded" onclick="return validateForm()">Send Message</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="title-box-2 pt-4 pt-md-0">
+                      <h5 class="title-left">
+                        Get in Touch
+                      </h5>
+                    </div>
+                    <div class="more-info">
+                      <p class="lead">
+                        As a Python developer, I am a skilled software professional with a passion for building 
+                        robust applications and solving complex problems using the Python programming language. 
+                        With a deep understanding of Python's syntax, data structures, and extensive library support, 
+                        I excel in creating efficient, readable, and maintainable code.
+                      </p>
+                      <ul class="list-ico">
+                        <li><span class="bi bi-geo-alt"></span> THRISSUR , KERALA</li>
+                        <li><span class="bi bi-phone"></span> +91 7356076539</li>
+                        <li><span class="bi bi-envelope"></span> salamshayan.aes@gmail.com</li>
+                      </ul>
+                    </div>
+                    <div class="socials">
+                      <ul>
+                        <li><a href="https://www.facebook.com/salamsha.aes?mibextid=LQQJ4d" target="_blank"><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
+                        <li><a href="https://instagram.com/absalaammm?igshid=MzRlODBiNWFlZA==" target="_blank"><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li>
+                        <li><a href="https://twitter.com/shayanvkn?s=21" target="_blank"><span class="ico-circle"><i class="bi bi-twitter"></i></span></a></li>
+                        <li><a href="https://www.linkedin.com/in/abdul-salam-3659a11a7" target="_blank"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script>
+    
+    var nameError = document.getElementById("nameError")
+    var emailError = document.getElementById("emailError")
+    var subjectError = document.getElementById('subjectError')
+    var messageError = document.getElementById('messageError')
+    var submitError = document.getElementById('submitError')
+    
+    function validateName() {
+      
+      var name= document.getElementById('name').value.trim()
+    
+      if(name.length < 4){
+        nameError.innerHTML = 'Name is required';
+        return false;
+      }
+      if(name == Number(name)){
+        nameError.innerHTML = 'Enter valid name';
+        return false;
+      }
+      
+      nameError.innerHTML = '';
+        return true;
+    }
+
+
+    function validateEmail() {
+		var email = document.getElementById('email').value;
+	
+		if(email.length == 0) {
+			emailError.innerHTML = 'Email is required';
+			return false;
+		}
+		if(!email.match(/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/)) {
+			emailError.innerHTML = 'Email invalid';
+			return false;
+		}
+		emailError.innerHTML = '';
+		return true;
+	}
+
+
+  function validateSubject() {
+		var subject = document.getElementById('subject').value;
+		var required =5;
+		var left = required - subject.length;
+	
+		if(left>0) {
+			subjectError.innerHTML = left + ' more characters required.';
+			return false;
+		} else {
+			subjectError.innerHTML = 'Enter a valid subject';
+		}
+	
+		subjectError.innerHTML = '';
+		return true;
+	}
+    
+
+  function validateMessage() {
+		var message = document.getElementById('message').value;
+		var required =10;
+		var left = required - message.length;
+	
+		if(left>0) {
+			messageError.innerHTML = left + ' more characters required.';
+			return false;
+		} else {
+			messageError.innerHTML = 'Enter a valid message';
+		}
+	
+		messageError.innerHTML = '';
+		return true;
+	}
+
+
+  function validateForm() {
+		if(!validateName() || !validateEmail() || !validateMessage() || !validateSubject()) {
+			submitError.style.display = 'block';
+			submitError.innerHTML = 'Please fix all errors to submit.';
+			setTimeout(function() {submitError.style.display = 'none';}, 3000);
+			return false;
+	}
+	 }
+    
+  
+    
+  </script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
